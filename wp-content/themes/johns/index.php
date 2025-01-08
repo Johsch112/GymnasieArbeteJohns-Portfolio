@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inspiring Brilliance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="wp-content\themes\johns\style.css">
+    <link rel="icon" href="http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/thestar.jpg" type="image/png">
 </head>
 
 <body>
@@ -20,27 +21,69 @@
 
 
     <header>
-        <!-- <div id="startpagewrapper">
-            <div id="cube">
-                <div class="face top">Top</div>
-                <div class="face bottom">Bottom</div>
-                <div class="face left">Left</div>
-                <div class="face right">Right</div>
-                <div class="face front">Front</div>
-                <div class="face back">Back</div>
-            </div>
-
-        </div> -->
-
         <div class="container">
+            <!-- <img src="http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/black-and-white-triangle-png-12-1.png" alt=""> -->
+
             <div class="cube">
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-                <div class="face left"></div>
-                <div class="face right"></div>
-                <div class="face front"></div>
-                <div class="face back"></div>
+                <div class="face top">
+
+                </div>
+                <div class="face bottom">
+
+                </div>
+                <div class="face left">
+
+                </div>
+                <div class="face right">
+
+                </div>
+                <div class="face front">
+
+                </div>
+                <div class="face back">
+
+                </div>
             </div>
+
+
+
+            <!-- <div class="cube">
+
+                <div class="face top">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="face bottom">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="face left">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="face right">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <div class="face front">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <div class="face back">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+            </div> -->
+            <!-- <img src="http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/black-and-white-triangle-png-12.png" alt=""> -->
         </div>
 
 
@@ -67,7 +110,7 @@
                 <h1 class="r">r</h1>
             </div>
 
-           
+
         </div>
         <h2 id="webdesignux">WEB, DESIGN, UX.</h2>
 
@@ -79,8 +122,9 @@
         <div class="progress-bar"></div>
         <ul>
             <!--ska stå php innan och efter echo get_home_url();-->
-            <li><a href="/wordpresstest/about">About</a></li>
+            <!-- <li><a href="/wordpresstest/about">About</a></li> -->
             <button onclick="SendToWork()">My Work</button>
+            <button onclick="SendToAbout()">About</button>
         </ul>
 
     </nav>
@@ -93,7 +137,6 @@
             <h2>I excel in programming, with a deep understanding of multiple languages, frameworks, and technologies.
                 Whether working with front-end tools like HTML5, CSS3, and JavaScript or delving into back-end systems
                 using Python, PHP, or Node.js, I have a proven ability to build scalable and efficient solutions.
-
                 <br>
                 <br>
                 My
@@ -120,10 +163,20 @@
 
 
 
+    <div class="spacemaker"></div>
+
+    <div class="windowwrapper">
+        <div class="window">
+        </div>
+    </div>
+
+    <div class="spacemaker"></div>
+
+
     <section id="mywork">
         <h2>POSTS</h2>
 
-        <div id="post">
+        <div class="post">
             <!-- Start the Loop. -->
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div>
@@ -149,7 +202,7 @@
     <?php endif; ?>
     </section>
 
-
+    <div class="square"></div>
 
     <div id="endingdesign"></div>
 
@@ -157,7 +210,12 @@
 
 
     <footer>FOOTER</footer>
+
+
     <script src="wp-content\themes\johns\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 </body>
 
 </html>

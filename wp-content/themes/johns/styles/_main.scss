@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     background-color: $mainbackground;
+    overflow-x: hidden;
     // cursor: url(/img/porkpointer.webp) 16 16, auto;
-    img{
-    max-width: 100%;
+    img {
+        max-width: 100%;
     }
 }
 
@@ -105,19 +108,23 @@ button {
 }
 
 .container {
-    width: 200px;
-    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     perspective: 500px;
-    margin: 100px;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+    border: 1px solid $secondarycolor;
 
 
     .cube {
         position: relative;
-        width: 200px;
-        height: 200px;
-        transform: rotateX(10deg);
+        width: 10vw;
+        height: 10vh;
+        transform: rotateX(45deg);
         transform-style: preserve-3d;
-        animation: spin 3s linear infinite forwards;
+        animation: spin 5s linear infinite forwards;
 
 
         .face {
@@ -133,31 +140,61 @@ button {
             font-size: 2rem;
         }
     }
-}
+
 
 .front {
     transform: translateZ(100px);
 }
 
-.back{
+.back {
     transform: translateZ(-100px) rotateY(180deg);
 }
 
-.left{
+.left {
     transform: translateX(-100px) rotateY(-90deg);
 }
 
-.right{
+.right {
     transform: translateX(100px) rotateY(90deg);
 }
 
-.top{
-    transform:translateY(-100px) rotateX(90deg);
+.top {
+    transform: translateY(-100px) rotateX(90deg);
 }
 
-.bottom{
- transform: translateY(100px) rotateX(-90deg);
+.bottom {
+    transform: translateY(100px) rotateX(-90deg);
 }
+
+.line{
+    border: 2px solid black;
+    height: 200px;
+    rotate: 45deg;
+    animation: linespin 5s linear infinite forwards;
+}
+
+.line1{
+    border: 2px solid $secondarycolor;
+    height: 50px;
+transform: translateX(-15px) translateY(-10px) rotate(45deg);
+}
+
+.line2{
+    border: 2px solid $secondarycolor;
+    height: 50px;
+    transform: translateX(15px) translateY(-10px) rotate(-45deg);
+}
+
+.line3{
+    border: 2px solid $secondarycolor;
+    height: 70px;
+
+    transform: translateY(10px) translateX(-5px) rotate(90deg);    
+
+}
+}
+
+
 
 
 #animatedtext {
@@ -178,19 +215,19 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
-flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 2em;
-  
-  
-  
-  #textanim1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
-  }
-  
-  /* #c{
+
+
+    #textanim1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    /* #c{
   
   }
   .r{
@@ -214,17 +251,18 @@ flex-wrap: wrap;
   .e{
   
   } */
-  
-  #textanim2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    h1{
-        color: $creamcolor;
+
+    #textanim2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        h1 {
+            color: $creamcolor;
+        }
     }
-  }
-  
-  /* #d{
+
+    /* #d{
   
   }
   .e{
@@ -251,12 +289,16 @@ flex-wrap: wrap;
 
 }
 
-#webdesignux{
+#webdesignux {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#star{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
 .progress-bar {
     color: red;
     height: 5px;
@@ -340,16 +382,33 @@ flex-wrap: wrap;
 
 }
 
+.spacemaker{
+    height: 50vh;
+}
 
+.windowwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 400px;
+    width: 100vw;
+    height: 100ch;
+    background-color: $secondarycolor;
+.window{
+    border: 10px solid $creamcolor;
+width: 10vw;
+height: 10vh;
+}
+}
 
-#post {
+.post {
     background-color: $secondarycolor;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    
+
 
     h2,
     p,
@@ -367,12 +426,23 @@ flex-wrap: wrap;
 }
 
 #endingdesign {
+    background-position: center;
+    background-image: url(http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/BottomDesignnoWidth.jpg);
+    background-repeat: no-repeat;
     height: 60vh;
 }
 
-// footer{
-// height: 40vh;
-// }
+.square{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: $creamcolor;
+}
+
+footer{
+height: 40vh;
+}
 
 // ---------------------------------------------------------------------------------------------------
 // #maintextanim1 {
@@ -431,20 +501,44 @@ flex-wrap: wrap;
     }
 
     to {
-        transform: rotateY(360deg) rotateX(10deg);
+        transform: rotateY(360deg);
     }
 }
 
+@keyframes linespin {
+    // from {
+    //     transform: rotate(0deg);
+    // }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgba(153, 5, 5, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+
+
+//   ------------------------------------------ MEDIA ------------------------------------------  
 @media (max-width: 768px) {
 
-    #star{
+    #star {
         display: none;
     }
-    #starttext{
+
+    #starttext {
         flex-direction: column;
         gap: 0;
     }
+
     h1 {
-      font-size: 20vw;
+        font-size: 20vw;
     }
-  }
+}

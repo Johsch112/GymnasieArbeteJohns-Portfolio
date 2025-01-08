@@ -6,6 +6,7 @@
 
 body {
   background-color: rgb(230, 104, 82);
+  overflow-x: hidden;
 }
 body img {
   max-width: 100%;
@@ -94,18 +95,22 @@ button {
 }
 
 .container {
-  width: 200px;
-  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   perspective: 500px;
-  margin: 100px;
+  margin-bottom: 20vh;
+  margin-top: 20vh;
+  border: 1px solid rgb(46, 46, 46);
 }
 .container .cube {
   position: relative;
-  width: 200px;
-  height: 200px;
-  transform: rotateX(10deg);
+  width: 10vw;
+  height: 10vh;
+  transform: rotateX(45deg);
   transform-style: preserve-3d;
-  animation: spin 3s linear infinite forwards;
+  animation: spin 5s linear infinite forwards;
 }
 .container .cube .face {
   width: 200px;
@@ -119,29 +124,44 @@ button {
   justify-content: center;
   font-size: 2rem;
 }
-
-.front {
+.container .front {
   transform: translateZ(100px);
 }
-
-.back {
+.container .back {
   transform: translateZ(-100px) rotateY(180deg);
 }
-
-.left {
+.container .left {
   transform: translateX(-100px) rotateY(-90deg);
 }
-
-.right {
+.container .right {
   transform: translateX(100px) rotateY(90deg);
 }
-
-.top {
+.container .top {
   transform: translateY(-100px) rotateX(90deg);
 }
-
-.bottom {
+.container .bottom {
   transform: translateY(100px) rotateX(-90deg);
+}
+.container .line {
+  border: 2px solid black;
+  height: 200px;
+  rotate: 45deg;
+  animation: linespin 5s linear infinite forwards;
+}
+.container .line1 {
+  border: 2px solid rgb(46, 46, 46);
+  height: 50px;
+  transform: translateX(-15px) translateY(-10px) rotate(45deg);
+}
+.container .line2 {
+  border: 2px solid rgb(46, 46, 46);
+  height: 50px;
+  transform: translateX(15px) translateY(-10px) rotate(-45deg);
+}
+.container .line3 {
+  border: 2px solid rgb(46, 46, 46);
+  height: 70px;
+  transform: translateY(10px) translateX(-5px) rotate(90deg);
 }
 
 #animatedtext {
@@ -226,6 +246,11 @@ button {
   align-items: center;
 }
 
+#star {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
 .progress-bar {
   color: red;
   height: 5px;
@@ -298,26 +323,60 @@ button {
   transform: scale(1.1);
 }
 
-#post {
+.spacemaker {
+  height: 50vh;
+}
+
+.windowwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 400px;
+  width: 100vw;
+  height: 100ch;
+  background-color: rgb(46, 46, 46);
+}
+.windowwrapper .window {
+  border: 10px solid rgb(233, 216, 191);
+  width: 10vw;
+  height: 10vh;
+}
+
+.post {
   background-color: rgb(46, 46, 46);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#post h2,
-#post p,
-#post a {
+.post h2,
+.post p,
+.post a {
   color: rgb(230, 104, 82);
   text-align: center;
   text-decoration: none;
 }
-#post #arrowsvg {
+.post #arrowsvg {
   transform: scale(5);
 }
 
 #endingdesign {
+  background-position: center;
+  background-image: url(http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/BottomDesignnoWidth.jpg);
+  background-repeat: no-repeat;
   height: 60vh;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(233, 216, 191);
+}
+
+footer {
+  height: 40vh;
 }
 
 @keyframes spin {
@@ -325,7 +384,20 @@ button {
     transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(360deg) rotateX(10deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes linespin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(153, 5, 5, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
   }
 }
 @media (max-width: 768px) {
