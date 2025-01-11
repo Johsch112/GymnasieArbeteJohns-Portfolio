@@ -151,16 +151,35 @@
 
 
     <section id="accolades">
-        <h2 class="award">My accolades</h2>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
-        <p class="award">I won best website</p>
+
+    <div class="awardswrapper">
+        <div class="awards">
+        <h2>My accolades</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        <h2>I won best website</h2>
+        </div>
+        </div>
     </section>
 
+
+    <div class="horizontalscrollwrapper">
+
+    <div class="horizontalscroll">
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+        <h2>Expedient</h2>
+    </div>
+
+    </div>
 
 
     <div class="spacemaker"></div>
@@ -176,10 +195,10 @@
     <section id="mywork">
         <h2>POSTS</h2>
 
-        <div class="post">
+        <!-- <div class="post"> -->
             <!-- Start the Loop. -->
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <div>
+                    <div class="post">
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <p><?php the_field('content'); ?></p>
 
@@ -191,7 +210,7 @@
                     </div>
                 <?php endwhile;
             else : ?>
-        </div>
+        <!-- </div> -->
 
         <!-- The very first "if" tested to see if there were any Posts to -->
         <!-- display.  This "else" part tells what do if there weren't any. -->

@@ -21,61 +21,63 @@ document.addEventListener("DOMContentLoaded", () => {
       mouse.style.top = e.clientY - 40 + "px";
       mouse.style.left = e.clientX - 40 + "px";
    });
-});
-
-function SendToWork() {
-   document.querySelector('#mywork').scrollIntoView({
-      behavior: 'smooth'
-   });
-};
-
-function SendToAbout() {
-   document.querySelector('#perspectiveattempt').scrollIntoView({
-      behavior: 'smooth'
-   });
-};
 
 
-// --------------------------------------------- GSAP ---------------------------------------------
 
-// use a script tag or an external JS file
-document.addEventListener("DOMContentLoaded", () => {
+   // --------------------------------------------- GSAP ---------------------------------------------
+
+
 
 
    gsap.registerPlugin(ScrollTrigger, TextPlugin)
-   gsap.to(".window", {
+   // gsap.to(".window", {
+   //    scrollTrigger: {
+   //       trigger: ".windowwrapper",
+   //       // start: "top ",
+   //       markers: true,
+   //       scrub: true,
+   //       toggleActions: "restart pause reverse pause"
+   //    },
+   //    // transformOrigin: "-500% 50% -100px",
+   //    z: 500,
+   //    duration: 3,
+   // });
+
+
+   // gsap.to(".post", {
+   //    scrollTrigger: {
+   //       trigger: ".post",
+   //       start: "top ",
+   //       markers: true,
+
+   //       pin: true,
+   //       toggleActions: "restart pause reverse pause"
+   //    },
+   //    z: 100,
+   //    duration: 3,
+   // });
+
+
+
+   const horizontalscroll = document.querySelector(".horizontalscroll")
+   let horizontalscrollwidth = horizontalscroll.scrollWidth;
+   let ScrollAmmount = horizontalscrollwidth - window.innerWidth;
+
+
+   console.log(ScrollAmmount)
+
+   gsap.to(".horizontalscroll", {
       scrollTrigger: {
-         trigger: ".windowwrapper",
-         // start: "top ",
-         markers: true,
-         scrub: true,
-         toggleActions: "restart pause reverse pause"
-      },
-      // transformOrigin: "-500% 50% -100px",
-      z: 500,
-      duration: 3,
-   });
-
-
-   gsap.to(".post", {
-      scrollTrigger: {
-         trigger: ".post",
-         start: "top ",
-         markers: true,
-
+         trigger: ".horizontalscrollwrapper",
+         start: "top 20%",
          pin: true,
-         toggleActions: "restart pause reverse pause"
+         end: "+=" + ScrollAmmount,
+         scrub: 1,
+         markers: true
       },
-      z:100,
-      duration: 3,
+      x: -ScrollAmmount,
+      ease: "none",
    });
-
-
-
-   scrollTrigger.create
-
-
-});
 
 
 // gsap.to(".square", {
@@ -89,3 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
 //    x: 700,
 //    duration: 3,
 // });
+   
+});
+
+function SendToWork() {
+   document.querySelector('#mywork').scrollIntoView({
+      behavior: 'smooth'
+   });
+};
+
+function SendToAbout() {
+   document.querySelector('#perspectiveattempt').scrollIntoView({
+      behavior: 'smooth'
+   });
+};
