@@ -85,6 +85,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       });
    
+
+      gsap.to(".window", {
+         scrollTrigger: {
+            trigger: ".windowwrapper",
+            start: "top",
+             end: '+=400px',
+            markers: true,
+            scrub: true,
+            pin:true,
+            toggleActions: "restart pause reverse pause"
+         },
+         x: 400,
+         y:100,
+         z:140,
+         duration: 5,
+      });
+
 });
 
 function SendToWork() {

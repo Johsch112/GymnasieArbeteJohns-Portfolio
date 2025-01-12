@@ -14,7 +14,7 @@
 
 <body>
 
-    <div id="cursor">
+    <div class="center" id="cursor">
         <div id="cursor-wrapper"></div>
     </div>
 
@@ -52,7 +52,7 @@
                 <h1 class="r">r</h1>
             </div>
         </div>
-        <h2 id="webdesignux">WEB, DESIGN, UX.</h2>
+        <h2 class="center">WEB, DESIGN, UX.</h2>
 
     </header>
 
@@ -69,7 +69,7 @@
     <div id="designbar"></div>
     <div class="perspectivewrapper">
         <div id="perspectiveattempt">
-            <div id="left">🍔</div>
+            <div class="center" id="left"></div>
             <div id="middleandbottom">
                 <div id="middle">
                     <h2>About</h2>
@@ -90,7 +90,7 @@
                     <br>
                 </div>
             </div>
-            <div id="right">🍔</div>
+            <div class="center" id="right"></div>
         </div>
         <div class="connector"></div>
         <section id="accolades">
@@ -119,7 +119,7 @@
                 </ul>
             </div>
 
-            <div class="container">
+            <div class="container center">
                 <div class="cube">
                     <div class="face top">
 
@@ -194,20 +194,19 @@
     <div class="horizontalscrollwrapper">
 
         <div class="horizontalscroll">
-            <h2>John Schürer</h2>
-            <h2>Expedient</h2>
-            <h2>Expedient</h2>
-            <h2>Expedient</h2>
+            <h2>John</h2>
+            <h2>Schürer</h2>
+            <h2>von</h2>
+            <h2>Waldheim</h2>
         </div>
 
     </div>
 
 
-    <div class="spacemaker"></div>
+    <!-- <div class="spacemaker"></div> -->
 
-    <div class="windowwrapper">
-        <div class="window">
-        </div>
+    <div class="windowwrapper center">
+        <div class="window center"><h3>Hallå!</h3></div>
     </div>
 
     <div class="spacemaker"></div>
@@ -221,7 +220,7 @@
         <?php if (have_posts()):
             while (have_posts()):
                 the_post(); ?>
-                <div class="post">
+                <div class="post center">
                     <h2><?php the_title(); ?></h2>
                     <p><?php the_field('content'); ?></p>
                     <p><?php the_field('megatext'); ?></p>
