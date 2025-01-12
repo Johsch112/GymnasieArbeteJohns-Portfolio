@@ -144,14 +144,12 @@
                 </div>
             <?php endwhile;
         else: ?>
-            <!-- </div> -->
-            <!-- The very first "if" tested to see if there were any Posts to -->
-            <!-- display.  This "else" part tells what do if there weren't any. -->
+
             <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
-            <!-- REALLY stop The Loop. -->
         <?php endif; ?>
     </section>
-    <!-- Footer containing a button which let's user quickly send a mail to my email -->
+    <!-- Footer containing a button which let's user quickly send a mail to my email, 
+     also contains a responsive helper div which removes some half circles on smaller screens -->
     <footer>
         <div class="repsonsivehelper">
             <div class="outerring1"></div>
