@@ -151,26 +151,28 @@
     <!-- Footer containing a button which let's user quickly send a mail to my email, 
      also contains a responsive helper div which removes some half circles on smaller screens -->
     <footer>
-        <div class="repsonsivehelper">
+<div class="ringsandbutton">
             <div class="outerring1"></div>
             <div class="outerring1"></div>
             <div class="outerring1"></div>
             <div class="outerring1"></div>
-        </div>
+
         <div class="outerring1"></div>
         <div class="outerring1"></div>
         <h2 class="center" id="hirebutton"><a href="mailto:john.schurervw@gmail.com">Let's talk!</a></h2>
         <div class="outerring2"></div>
         <div class="outerring2"></div>
-        <div class="repsonsivehelper">
+
             <div class="outerring2"></div>
             <div class="outerring2"></div>
             <div class="outerring2"></div>
             <div class="outerring2"></div>
-        </div>
-    </footer>
+            </div>
+   
     <!-- Ending design with the star from the title to "close the loop" so to speak -->
     <div id="endingdesign"></div>
+    </footer>
+    
     <script src="wp-content\themes\johns\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

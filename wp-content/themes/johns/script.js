@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
          pin: true,
          end: "+=" + ScrollAmmount,
          scrub: 1,
-         markers: true
       },
       x: -ScrollAmmount,
       ease: "none",
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
          trigger: "footer",
          start: "top center",
          scrub: 1,
-         markers: true
       },
       x: 400
    });
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
          trigger: "footer",
          start: "top center",
          scrub: 1,
-         markers: true
       },
       x: -400
    });
@@ -95,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: ".windowwrapper",
             start: "top",
              end: '+=400px',
-            markers: true,
             scrub: true,
             pin:true,
             toggleActions: "restart pause reverse pause"
@@ -109,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function SendToWork() {
-   document.querySelector('#mywork').scrollIntoView({
+   document.querySelector('.windowwrapper').scrollIntoView({
       behavior: 'smooth'
    });
 };

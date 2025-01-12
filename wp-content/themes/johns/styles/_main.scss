@@ -50,7 +50,7 @@ body {
     background-color: rgba(255, 255, 255, 0.004);
     backdrop-filter: blur(0.5px);
     pointer-events: none;
-    z-index: 99999;
+    z-index: 999999;
 
     #cursor-wrapper {
         position: fixed;
@@ -527,12 +527,7 @@ nav {
     }
 }
 
-#endingdesign {
-    background-position: center;
-    background-image: url(http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/resized.jpg);
-    background-repeat: no-repeat;
-    height: 30vh;
-}
+
 
 .repsonsivehelper {
     display: inherit;
@@ -564,33 +559,53 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-
-    #hirebutton {
-        text-align: center;
-        height: 15vh;
-        width: 15vh;
-        border-radius: 50%;
-        transition: all 1s ease;
-        animation: none;
-        background-color: $secondarycolor;
-        z-index: 99999;
-        // transition: all ease;
-        background-size: 500% 500%;
-
-        a {
-            color: $creamcolor;
-            text-decoration: none;
-            z-index: 99999;
-        }
+    flex-direction: column;
+    z-index: 9999;
 
 
-        &:hover {
-            animation: hirebutton 1s ease forwards;
-        }
+    .ringsandbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 3rem;
+        #hirebutton {
+            text-align: center;
+            height: 15vh;
+            width: 15vh;
+            border-radius: 50%;
+            transition: all 1s ease;
+            animation: none;
+            background-color: $secondarycolor;
+            z-index: 9999;
+            // transition: all ease;
+            background-size: 500% 500%;
+    
+            a {
+                color: $creamcolor;
+                text-decoration: none;
+                z-index: 9999;
+            }
+    
+    
+            &:hover {
+                animation: hirebutton 1s ease forwards;
+            }
+
+
     }
-}
+    }
+    #endingdesign {
+        margin-top: 3rem;
+        background-position: center;
+        background-image: url(http://localhost:8080/wordpresstest/wp-content/uploads/2025/01/resized.jpg);
+        background-repeat: no-repeat;
+        height: 30vh;
+        width: 100%;
+        z-index: 99999;
+    }
 
+}
 // ---------------------------------------------------------------------------------------------------
 
 @keyframes hirebutton {
@@ -662,7 +677,15 @@ footer {
 
 //   ------------------------------------------ MEDIA ------------------------------------------  
 @media (max-width: 768px) {
-
+    .post{
+    p{
+margin: 0 20vw;
+    }
+    }
+    .window{
+        width: 15vw;
+        height: 15vw;
+    }
     #star {
         display: none;
     }
@@ -673,10 +696,32 @@ footer {
     }
 
     h1 {
-        font-size: 20vw;
+        font-size: 15vw;
+    }
+    .end{
+        font-size: 15vw;
     }
 
     .repsonsivehelper {
         display: none;
+    }
+
+    .hirebutton{
+        width: 10vh;
+        height: 10vh;
+    }
+
+#middle{
+    width: 40vw;
+}
+
+    #accolades{
+        margin: 0 15vw;
+    }
+
+    footer{
+        #endingdesign{
+            background-size: cover;
+        }
     }
 }
