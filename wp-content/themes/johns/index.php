@@ -13,16 +13,11 @@
 </head>
 
 <body>
-<div class="progressbarcontainer">
-    <div class="progress-bar"></div>
-</div>
-
     <div class="center" id="cursor">
         <div id="cursor-wrapper"></div>
     </div>
-
     <header>
-        <!-- Kubens element -->
+        <!-- Elements of the cube -->
         <div class="container center">
             <div class="cube">
                 <div class="face top">
@@ -39,7 +34,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Styling for the title of the site -->
         <div id="starttext">
             <div id="textanim1">
             </div>
@@ -56,18 +51,16 @@
             </div>
         </div>
         <h2 class="center">WEB, DESIGN, UX.</h2>
-
     </header>
-
+    <!-- Navigation which sends users to certain elements -->
     <nav>
-            <div class="sendbuttons">
+        <div class="sendbuttons">
             <button onclick="SendToWork()">My Work</button>
             <button onclick="SendToAbout()">About</button>
         </div>
-
     </nav>
     <div id="designbar"></div>
-
+    <!-- Här sker all 3d styling -->
     <div class="perspectivewrapper">
         <div id="perspectiveattempt">
             <div class="center" id="left"></div>
@@ -86,7 +79,6 @@
                         grasp of modern programming paradigms, such as object-oriented programming and functional
                         programming,
                         allows me to write clean, maintainable code that stands the test of time.
-
                     </p>
                     <br>
                 </div>
@@ -94,6 +86,7 @@
             <div class="center" id="right"></div>
         </div>
         <div class="connector"></div>
+        <!-- Shows some of my awards -->
         <section id="accolades">
             <h3>AWARDS</h3>
             <div class="awards">
@@ -103,55 +96,37 @@
                     <li>Interactive Excellence Award - 2020 <br></li>
                     <li>The CSS Wizard Trophy - 2021 <br></li>
                     <li>Creative Code Artistry Medal - 2021 <br></li>
-
                 </ul>
             </div>
-
             <div class="container center">
                 <div class="cube">
-                    <div class="face top">
-
-                    </div>
-                    <div class="face bottom">
-
-                    </div>
-                    <div class="face left">
-
-                    </div>
-                    <div class="face right">
-
-                    </div>
-                    <div class="face front">
-
-                    </div>
-                    <div class="face back">
-
-                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face front"></div>
+                    <div class="face back"></div>
                 </div>
-                </div>
+            </div>
         </section>
     </div>
-
+    <!-- Styling for the horizontal scrolling effect using GSAP -->
     <div class="horizontalscrollwrapper">
-
         <div class="horizontalscroll">
             <h2>John</h2>
             <h2>Schürer</h2>
             <h2>von</h2>
             <h2>Waldheim</h2>
         </div>
-
     </div>
-
+    <!-- Another GSAP animation which makes the window element grow on scroll -->
     <div class="windowwrapper center">
         <div class="window center">
             <h3>My experience</h3>
         </div>
     </div>
 
-    <!-- <div class="spacemaker"></div>
- -->
-
+    <!-- Loop which goes through all my posts on wordpress database -->
     <section id="mywork">
         <!-- <div class="post"> -->
         <!-- Start the Loop. -->
@@ -163,31 +138,20 @@
                     <p><?php the_field('content'); ?></p>
                     <p><?php the_field('megatext'); ?></p>
                     <?php $image = get_field('image'); ?>
-
-
-                    <!-- <img id="arrowsvg" src="wp-content\themes\johns\img\reshot-icon-arrow-upward-V2XFR4EU7Z.svg" alt=""> -->
                     <?php if ($image != NULL) { ?>
                         <img src="<?php echo $image; ?>">
                     <?php } ?>
-
                 </div>
             <?php endwhile;
         else: ?>
             <!-- </div> -->
-
             <!-- The very first "if" tested to see if there were any Posts to -->
             <!-- display.  This "else" part tells what do if there weren't any. -->
             <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
-
-
             <!-- REALLY stop The Loop. -->
         <?php endif; ?>
     </section>
-
-
-
-
-
+    <!-- Footer containing a button which let's user quickly send a mail to my email -->
     <footer>
         <div class="repsonsivehelper">
             <div class="outerring1"></div>
@@ -207,9 +171,8 @@
             <div class="outerring2"></div>
         </div>
     </footer>
-
+    <!-- Ending design with the star from the title to "close the loop" so to speak -->
     <div id="endingdesign"></div>
-
     <script src="wp-content\themes\johns\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

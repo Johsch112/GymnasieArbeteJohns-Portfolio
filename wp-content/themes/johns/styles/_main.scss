@@ -450,9 +450,9 @@ nav {
 
 .horizontalscrollwrapper {
     width: 100%;
-    background: linear-gradient(45deg, rgb(233, 216, 191), rgb(173, 216, 230), rgb(46, 46, 46));
+    background: linear-gradient(45deg, rgb(233, 216, 191), rgb(172, 192, 199), rgb(46, 46, 46));
     background-size: 300% 300%;
-    animation: slide 10s linear infinite;
+    animation: slide 5s linear infinite;
 
     .horizontalscroll {
         width: 100%;
@@ -499,9 +499,13 @@ nav {
     //     transform: scale(0.5);
     // }
 
-    ;
+    img{
+        border-radius: 12px;
+    }
 
     h2{
+        display: flex;
+        flex-wrap: wrap;
         color: $mainbackground;
         text-align: center;
         text-decoration: none;

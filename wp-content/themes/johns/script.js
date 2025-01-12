@@ -86,7 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       });
    
+    let windowwrapper = document.getElementsByClassName('windowwrapper')[0];
+    let windowwrapperZ = windowwrapper.clientHeight * 0.5;
 
+   //  let windowwrapperHeight = windowwrapper.clientHeight;
       gsap.to(".window", {
          scrollTrigger: {
             trigger: ".windowwrapper",
@@ -97,9 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
             pin:true,
             toggleActions: "restart pause reverse pause"
          },
-         z:300,
+         z: 300,
+         // scale: (index, target) => windowwrapperZ,
          duration: 5,
       });
+
 
 });
 
