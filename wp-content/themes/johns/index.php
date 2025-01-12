@@ -13,6 +13,9 @@
 </head>
 
 <body>
+<div class="progressbarcontainer">
+    <div class="progress-bar"></div>
+</div>
 
     <div class="center" id="cursor">
         <div id="cursor-wrapper"></div>
@@ -20,7 +23,7 @@
 
     <header>
         <!-- Kubens element -->
-        <div class="container">
+        <div class="container center">
             <div class="cube">
                 <div class="face top">
                 </div>
@@ -42,7 +45,7 @@
             </div>
             <h1 id="star">✧</h1>
             <div id="textanim2">
-                <h1 id=" d">d</h1>
+                <h1 id="d">d</h1>
                 <h1 class="e">e</h1>
                 <h1 id="s">s</h1>
                 <h1 class="i">i</h1>
@@ -57,16 +60,14 @@
     </header>
 
     <nav>
-        <div class="progress-bar"></div>
-        <ul>
-            <!--ska stå php innan och efter echo get_home_url();-->
-            <!-- <li><a href="/wordpresstest/about">About</a></li> -->
+            <div class="sendbuttons">
             <button onclick="SendToWork()">My Work</button>
             <button onclick="SendToAbout()">About</button>
-        </ul>
+        </div>
 
     </nav>
     <div id="designbar"></div>
+
     <div class="perspectivewrapper">
         <div id="perspectiveattempt">
             <div class="center" id="left"></div>
@@ -94,27 +95,14 @@
         </div>
         <div class="connector"></div>
         <section id="accolades">
+            <h3>AWARDS</h3>
             <div class="awards">
                 <ul>
-                    <!-- <h2>Golden Pixel Award for Best UI/UX Design - 2015</h2>
-        <br>
-        <h2>CodeCraft Innovator of the Year - 2017</h2>
-        <br>
-        <h2>Interactive Excellence Award - 2020</h2>
-        <br>
-        <h2>The CSS Wizard Trophy - 2021</h2>
-        <br>
-        <h2>Creative Code Artistry Medal - 2021</h2> -->
-
-                    <li>Golden Pixel Award for Best UI/UX Design - 2015</li>
-                    <br>
-                    <li>CodeCraft Innovator of the Year - 2017</li>
-                    <br>
-                    <li>Interactive Excellence Award - 2020</li>
-                    <br>
-                    <li>The CSS Wizard Trophy - 2021</li>
-                    <br>
-                    <li>Creative Code Artistry Medal - 2021</li>
+                    <li>Golden Pixel Award for Best UI/UX Design - 2015 <br></li>
+                    <li>CodeCraft Innovator of the Year - 2017 <br></li>
+                    <li>Interactive Excellence Award - 2020 <br></li>
+                    <li>The CSS Wizard Trophy - 2021 <br></li>
+                    <li>Creative Code Artistry Medal - 2021 <br></li>
 
                 </ul>
             </div>
@@ -140,56 +128,9 @@
 
                     </div>
                 </div>
+                </div>
         </section>
     </div>
-    <!-- <div id="designbar2"></div> -->
-
-
-    <!-- <section id="accolades">
-        <div class="awards">
-    <ul>
-        <li>Golden Pixel Award for Best UI/UX Design - 2015</li>
-        <br>
-        <li>CodeCraft Innovator of the Year - 2017</li>
-        <br>
-        <li>Interactive Excellence Award - 2020</li>
-        <br>
-        <li>The CSS Wizard Trophy - 2021</li>
-        <br>
-        <li>Creative Code Artistry Medal - 2021</li>
-        
-    </ul>
-        </div>
-        
-        <div class="container">
-            <div class="cube">
-                <div class="face top">
-
-                </div>
-                <div class="face bottom">
-
-                </div>
-                <div class="face left">
-
-                </div>
-                <div class="face right">
-
-                </div>
-                <div class="face front">
-
-                </div>
-                <div class="face back">
-
-                </div>
-            </div>
-    </section> -->
-
-
-
-
-
-
-
 
     <div class="horizontalscrollwrapper">
 
@@ -202,19 +143,16 @@
 
     </div>
 
-
-    <!-- <div class="spacemaker"></div> -->
-
     <div class="windowwrapper center">
-        <div class="window center"><h3>Hallå!</h3></div>
+        <div class="window center">
+            <h3>My experience</h3>
+        </div>
     </div>
 
-    <div class="spacemaker"></div>
-
+    <!-- <div class="spacemaker"></div>
+ -->
 
     <section id="mywork">
-        <h2>POSTS</h2>
-
         <!-- <div class="post"> -->
         <!-- Start the Loop. -->
         <?php if (have_posts()):
@@ -259,9 +197,7 @@
         </div>
         <div class="outerring1"></div>
         <div class="outerring1"></div>
-        <button>
-            <h2 id="hirebutton"><a href="mailto:john.schurervw@gmail.com">Let's talk!</a></h2>
-        </button>
+        <h2 class="center" id="hirebutton"><a href="mailto:john.schurervw@gmail.com">Let's talk!</a></h2>
         <div class="outerring2"></div>
         <div class="outerring2"></div>
         <div class="repsonsivehelper">

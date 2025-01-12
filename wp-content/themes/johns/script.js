@@ -1,13 +1,14 @@
-let progressBar = document.querySelector(".progress-bar");
-let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-window.onscroll = function () {
-   let progress = (scrollY / documentHeight) * 100;
-   progressBar.style.width = progress + "%";
-}
-
-
 document.addEventListener("DOMContentLoaded", () => {
+
+   let progressBar = document.querySelector(".progress-bar");
+   // let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+   let documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - document.documentElement.clientHeight;
+   
+   window.onscroll = function () {
+      let progress = (scrollY / documentHeight) * 100;
+      progressBar.style.width = progress + "%";
+   }
+
 
    let body = document.querySelector('body');
    let mouse = document.querySelector('#cursor');
@@ -96,9 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             pin:true,
             toggleActions: "restart pause reverse pause"
          },
-         x: 400,
-         y:100,
-         z:140,
+         z:300,
          duration: 5,
       });
 

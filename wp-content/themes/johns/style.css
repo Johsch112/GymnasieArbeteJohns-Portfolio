@@ -18,6 +18,23 @@ body img {
   align-items: center;
 }
 
+.progressbarcontainer {
+  z-index: 9999;
+  width: 85%;
+  top: 0;
+  position: sticky;
+}
+
+.progress-bar {
+  position: relative;
+  top: 0;
+  color: red;
+  height: 5px;
+  width: 1px;
+  background-color: red;
+  z-index: 99999;
+}
+
 #cursor {
   position: absolute;
   border: #D9B343 solid 1px;
@@ -67,7 +84,7 @@ nav {
   margin-bottom: 0.5rem;
   z-index: 999999;
 }
-nav ul {
+nav .sendbuttons {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -76,7 +93,7 @@ nav ul {
   list-style: none;
   z-index: 999999;
 }
-nav ul button {
+nav .sendbuttons button {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
@@ -257,13 +274,6 @@ nav a:hover {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-.progress-bar {
-  color: red;
-  height: 5px;
-  width: 0;
-  background-color: red;
-}
-
 /* -------------------------3D-LABORATORY------------------------------- */
 .perspectivewrapper {
   display: flex;
@@ -350,6 +360,7 @@ nav a:hover {
   border: 4px solid rgb(46, 46, 46);
   perspective: 500px;
   margin-top: -2.5rem;
+  font-size: 2rem;
 }
 #accolades .awards li {
   transition: all 0.5s ease;
@@ -362,6 +373,9 @@ nav a:hover {
 
 .horizontalscrollwrapper {
   width: 100%;
+  background: linear-gradient(45deg, rgb(233, 216, 191), rgb(173, 216, 230), rgb(46, 46, 46));
+  background-size: 300% 300%;
+  animation: slide 10s linear infinite;
 }
 .horizontalscrollwrapper .horizontalscroll {
   width: 100%;
@@ -371,7 +385,7 @@ nav a:hover {
 .horizontalscrollwrapper .horizontalscroll h2 {
   text-align: left;
   font-size: 10rem;
-  padding: 10rem;
+  padding: 5rem;
 }
 
 .spacemaker {
@@ -380,7 +394,7 @@ nav a:hover {
 
 .windowwrapper {
   perspective: 400px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgb(46, 46, 46);
 }
@@ -397,16 +411,19 @@ nav a:hover {
 .post {
   background-color: rgb(46, 46, 46);
   flex-direction: column;
+  padding-bottom: 3rem;
 }
-.post img {
-  transform: scale(0.5);
-}
-.post h2,
-.post p,
-.post a {
+.post h2 {
   color: rgb(230, 104, 82);
   text-align: center;
   text-decoration: none;
+}
+.post p {
+  color: rgb(230, 104, 82);
+  text-align: left;
+  text-decoration: none;
+  margin: 0 30vw;
+  padding-bottom: 1rem;
 }
 .post #arrowsvg {
   transform: scale(5);
@@ -443,7 +460,7 @@ footer {
   align-items: center;
   height: 40vh;
 }
-footer button {
+footer #hirebutton {
   text-align: center;
   height: 15vh;
   width: 15vh;
@@ -454,12 +471,12 @@ footer button {
   z-index: 99999;
   background-size: 500% 500%;
 }
-footer button a {
+footer #hirebutton a {
   color: rgb(233, 216, 191);
   text-decoration: none;
   z-index: 99999;
 }
-footer button:hover {
+footer #hirebutton:hover {
   animation: hirebutton 1s ease forwards;
 }
 
