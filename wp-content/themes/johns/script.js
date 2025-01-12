@@ -30,34 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
    gsap.registerPlugin(ScrollTrigger, TextPlugin)
-   // gsap.to(".window", {
-   //    scrollTrigger: {
-   //       trigger: ".windowwrapper",
-   //       // start: "top ",
-   //       markers: true,
-   //       scrub: true,
-   //       toggleActions: "restart pause reverse pause"
-   //    },
-   //    // transformOrigin: "-500% 50% -100px",
-   //    z: 500,
-   //    duration: 3,
-   // });
-
-
-   // gsap.to(".post", {
-   //    scrollTrigger: {
-   //       trigger: ".post",
-   //       start: "top ",
-   //       markers: true,
-
-   //       pin: true,
-   //       toggleActions: "restart pause reverse pause"
-   //    },
-   //    z: 100,
-   //    duration: 3,
-   // });
-
-
 
    const horizontalscroll = document.querySelector(".horizontalscroll")
    let horizontalscrollwidth = horizontalscroll.scrollWidth;
@@ -80,17 +52,38 @@ document.addEventListener("DOMContentLoaded", () => {
    });
 
 
-// gsap.to(".square", {
-//    scrollTrigger: {
-//       trigger: ".square",
-//       // start: "top center",
-//       markers: true,
-//       scrub: true,
-//       toggleActions: "restart pause reverse pause"
-//    },
-//    x: 700,
-//    duration: 3,
-// });
+   gsap.to(".outerring1", {
+      scrollTrigger: {
+         trigger: "footer",
+         start: "top center",
+         scrub: 1,
+         markers: true
+      },
+      x: 400
+   });
+
+   gsap.to(".outerring2", {
+      scrollTrigger: {
+         trigger: "footer",
+         start: "top center",
+         scrub: 1,
+         markers: true
+      },
+      x: -400
+   });
+
+   gsap.to("#textanim1",{
+      duration: 2,
+      yPercent: 0,
+      stagger: 0.02,
+      text: {
+      value:"Creative",
+      oldClass: "start",
+      newClass: "end",
+      
+      
+      },
+      });
    
 });
 
