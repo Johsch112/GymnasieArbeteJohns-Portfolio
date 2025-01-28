@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
    let progressBar = document.querySelector(".progress-bar");
-   // let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
    let documentHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - document.documentElement.clientHeight;
    
    window.onscroll = function () {
       let progress = (scrollY / documentHeight) * 100;
       progressBar.style.width = progress + "%";
    }
-
 
    let body = document.querySelector('body');
    let mouse = document.querySelector('#cursor');
@@ -23,12 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mouse.style.left = e.clientX - 40 + "px";
    });
 
-
-
    // --------------------------------------------- GSAP ---------------------------------------------
-
-
-
 
    gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
@@ -78,15 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
       value:"Creative",
       oldClass: "start",
       newClass: "end",
-      
-      
       },
       });
    
     let windowwrapper = document.getElementsByClassName('windowwrapper')[0];
-    let windowwrapperZ = windowwrapper.clientHeight * 0.5;
 
-   //  let windowwrapperHeight = windowwrapper.clientHeight;
       gsap.to(".window", {
          scrollTrigger: {
             trigger: ".windowwrapper",
@@ -97,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleActions: "restart pause reverse pause"
          },
          z: 300,
-         // scale: (index, target) => windowwrapperZ,
          duration: 5,
       });
 

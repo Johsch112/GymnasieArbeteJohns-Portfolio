@@ -15,28 +15,38 @@ body {
     }
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.progressbarcontainer{
-    z-index: 9999;
-    width: 85%;
-    top: 0;
-    position: sticky;
-}
 
-    .progress-bar {
-        position: relative;
-        top: 0;
-        color: red;
-        height: 5px;
-        width: 1px;
-        background-color: red;
-        z-index: 99999;
-    }
+// #topbar{
+//     display: flex;
+//     justify-content: space-evenly;
+//     ul{
+// font-size: 2rem;
+//         display: flex;
+//         justify-content: center;
+//         flex-direction: row;
+//         text-decoration: none;
+//         list-style-type: none;
+//     }
+
+
+//     #verticalnav{
+//         display: flex;
+//         ul{
+//             gap: 1em;
+//             li{
+//                 border: 1px solid $secondarycolor;
+//             }
+//             flex-direction: column;
+
+//         }
+//     }
+// }
 
 
 #cursor {
@@ -234,14 +244,6 @@ nav {
     flex-wrap: wrap;
 }
 
-// #starttext {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-// }
-
 
 .end {
     font-family: "arial black";
@@ -264,31 +266,6 @@ nav {
         justify-content: center;
 
     }
-
-    /* #c{
-  
-  }
-  .r{
-  
-  }
-  .e{
-  
-  }
-  #a{
-  
-  }
-  #t{
-  
-  }
-  .i{
-  
-  }
-  #v{
-  
-  }
-  .e{
-  
-  } */
 
     #textanim2 {
         display: flex;
@@ -363,7 +340,7 @@ nav {
     height: 10vh;
     width: 30vw;
     transform: rotateX(40deg);
-    transform-origin: center top; 
+    transform-origin: center top;
 }
 
 
@@ -422,7 +399,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 0 30vw;
-    padding: 1rem;
+    padding: 2rem;
     border: 4px solid $secondarycolor;
     perspective: 500px;
     margin-top: -2.5rem;
@@ -434,7 +411,7 @@ nav {
             transition: all 0.5s ease;
             list-style-type: none;
             font-size: 1.5rem;
-
+            border: 1px solid $secondarycolor;
 
             &:hover {
                 transform: scale(1.1);
@@ -468,6 +445,61 @@ nav {
 }
 
 
+#scrolltextwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f6f5f3;
+
+    h3 {
+        font-size: 8rem;
+        text-align: center;
+        color: $stolenfisherfriends
+    }
+
+    .scrollingtextright {
+        animation: textright 15s ease infinite forwards;
+        white-space: nowrap;
+
+
+
+    }
+
+    .scrollingtextright2 {
+        animation: textright2 17s ease infinite forwards;
+        white-space: nowrap;
+
+
+
+    }
+
+    .scrollingtextleft {
+        animation: textleft 20s ease infinite forwards;
+        white-space: nowrap;
+
+    }
+
+    .scrollingtextimage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 9999;
+        right: 50%;
+        left: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+
 .spacemaker {
     height: 50vh;
 }
@@ -482,7 +514,8 @@ nav {
         border: 10px solid $creamcolor;
         width: 10vw;
         height: 10vh;
-        h3{
+
+        h3 {
             color: $mainbackground;
             text-align: center;
         }
@@ -499,11 +532,11 @@ nav {
     //     transform: scale(0.5);
     // }
 
-    img{
+    img {
         border-radius: 12px;
     }
 
-    h2{
+    h2 {
         display: flex;
         flex-wrap: wrap;
         color: $mainbackground;
@@ -511,7 +544,7 @@ nav {
         text-decoration: none;
     }
 
-    p{
+    p {
         color: $mainbackground;
         text-align: left;
         text-decoration: none;
@@ -563,12 +596,13 @@ footer {
     z-index: 9999;
 
 
-    .ringsandbutton{
+    .ringsandbutton {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         margin-top: 3rem;
+
         #hirebutton {
             text-align: center;
             height: 15vh;
@@ -580,21 +614,22 @@ footer {
             z-index: 9999;
             // transition: all ease;
             background-size: 500% 500%;
-    
+
             a {
                 color: $creamcolor;
                 text-decoration: none;
                 z-index: 9999;
             }
-    
-    
+
+
             &:hover {
                 animation: hirebutton 1s ease forwards;
             }
 
 
+        }
     }
-    }
+
     #endingdesign {
         margin-top: 3rem;
         background-position: center;
@@ -606,6 +641,7 @@ footer {
     }
 
 }
+
 // ---------------------------------------------------------------------------------------------------
 
 @keyframes hirebutton {
@@ -675,17 +711,65 @@ footer {
     }
 }
 
+
+
+@keyframes textright {
+    0% {
+        transform: translateX(-10vw);
+    }
+
+    50% {
+        transform: translateX(50vw);
+    }
+
+    100% {
+        transform: translateX(-10vw);
+    }
+}
+
+@keyframes textright2 {
+    0% {
+        transform: translateX(-10vw);
+    }
+
+    50% {
+        transform: translateX(50vw);
+    }
+
+    100% {
+        transform: translateX(-10vw);
+    }
+}
+
+
+@keyframes textleft {
+    0% {
+        transform: translateX(10vw);
+    }
+
+    50% {
+        transform: translateX(-50vw);
+    }
+
+    100% {
+        transform: translateX(10vw);
+    }
+}
+
+
 //   ------------------------------------------ MEDIA ------------------------------------------  
 @media (max-width: 768px) {
-    .post{
-    p{
-margin: 0 20vw;
+    .post {
+        p {
+            margin: 0 20vw;
+        }
     }
-    }
-    .window{
+
+    .window {
         width: 15vw;
         height: 15vw;
     }
+
     #star {
         display: none;
     }
@@ -698,7 +782,8 @@ margin: 0 20vw;
     h1 {
         font-size: 15vw;
     }
-    .end{
+
+    .end {
         font-size: 15vw;
     }
 
@@ -706,21 +791,21 @@ margin: 0 20vw;
         display: none;
     }
 
-    .hirebutton{
+    .hirebutton {
         width: 10vh;
         height: 10vh;
     }
 
-#middle{
-    width: 40vw;
-}
+    #middle {
+        width: 40vw;
+    }
 
-    #accolades{
+    #accolades {
         margin: 0 15vw;
     }
 
-    footer{
-        #endingdesign{
+    footer {
+        #endingdesign {
             background-size: cover;
         }
     }

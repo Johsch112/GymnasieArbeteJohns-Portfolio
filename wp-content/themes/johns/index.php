@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John SvW Web Design UX</title>
+    <title>John SvW Web Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -16,6 +16,24 @@
     <div class="center" id="cursor">
         <div id="cursor-wrapper"></div>
     </div>
+    <!-- 
+    <div id="topbar">
+
+        <ul>
+            <li><a href="">Text</a></li>
+            <li><a href="">Text</a></li>
+        </ul>
+
+        <div id="verticalnav">
+            <ul>
+                <li><a href="">Linkedin</a></li>
+                <li><a href="">Github</a></li>
+            </ul>
+        </div>
+
+    </div> -->
+
+
     <header>
         <!-- Elements of the cube -->
         <div class="container center">
@@ -119,6 +137,23 @@
             <h2>Waldheim</h2>
         </div>
     </div>
+
+
+
+    <div id="scrolltextwrapper">
+        <div class="scrollingtextright">
+            <h3>Browsing the web Browsing the web Browsing the web</h3>
+        </div>
+        <div class="scrollingtextimage"><img src="http://localhost:8080/wordpresstest/wp-content/uploads/2024/11/DSC_1394-removebg-preview.png" alt="">
+        </div>
+        <div class="scrollingtextleft">
+            <h3>HTML CSS JAVASCRIPT PHP XAAMP</h3>
+        </div>
+        <div class="scrollingtextright2">
+            <h3>Loading cat memes</h3>
+        </div>
+    </div>
+
     <!-- Another GSAP animation which makes the window element grow on scroll -->
     <div class="windowwrapper center">
         <div class="window center">
@@ -126,7 +161,7 @@
         </div>
     </div>
 
-    <!-- Loop which goes through all my posts on wordpress database -->
+    <!-- Loop which goes through all the posts on wordpress database -->
     <section id="mywork">
         <!-- <div class="post"> -->
         <!-- Start the Loop. -->
@@ -151,28 +186,28 @@
     <!-- Footer containing a button which let's user quickly send a mail to my email, 
      also contains a responsive helper div which removes some half circles on smaller screens -->
     <footer>
-<div class="ringsandbutton">
+        <div class="ringsandbutton">
             <div class="outerring1"></div>
             <div class="outerring1"></div>
             <div class="outerring1"></div>
             <div class="outerring1"></div>
 
-        <div class="outerring1"></div>
-        <div class="outerring1"></div>
-        <h2 class="center" id="hirebutton"><a href="mailto:john.schurervw@gmail.com">Let's talk!</a></h2>
-        <div class="outerring2"></div>
-        <div class="outerring2"></div>
+            <div class="outerring1"></div>
+            <div class="outerring1"></div>
+            <h2 class="center" id="hirebutton"><a href="mailto:john.schurervw@gmail.com">Let's talk!</a></h2>
+            <div class="outerring2"></div>
+            <div class="outerring2"></div>
 
             <div class="outerring2"></div>
             <div class="outerring2"></div>
             <div class="outerring2"></div>
             <div class="outerring2"></div>
-            </div>
-   
-    <!-- Ending design with the star from the title to "close the loop" so to speak -->
-    <div id="endingdesign"></div>
+        </div>
+
+        <!-- Ending design with the star from the title to "close the loop" so to speak -->
+        <div id="endingdesign"></div>
     </footer>
-    
+
     <script src="wp-content\themes\johns\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
