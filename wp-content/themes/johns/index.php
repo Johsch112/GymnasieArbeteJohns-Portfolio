@@ -144,8 +144,8 @@
         <div class="scrollingtextright">
             <h3>Browsing the web Browsing the web Browsing the web</h3>
         </div>
-        <div class="scrollingtextimage"><img src="http://localhost:8080/wordpresstest/wp-content/uploads/2024/11/DSC_1394-removebg-preview.png" alt="">
-        </div>
+        <!-- <div class="scrollingtextimage"><img src="http://localhost:8080/wordpresstest/wp-content/uploads/2024/11/DSC_1394-removebg-preview.png" alt="">
+        </div> -->
         <div class="scrollingtextleft">
             <h3>HTML CSS JAVASCRIPT PHP XAAMP</h3>
         </div>
